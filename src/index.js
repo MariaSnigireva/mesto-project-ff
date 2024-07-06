@@ -19,7 +19,7 @@ const newCardForm = document.querySelector('.popup__form[name="new-place"]');
 const newCardPopup = document.querySelector('.popup_type_new-card');
 newCardForm.addEventListener('submit', addCard);
 
-// Добавляем обработчики для закрытия всех попапов
+// ... для закрытия всех попапов
 document.querySelectorAll('.popup__close').forEach(closeButton => {
   closeButton.addEventListener('click', function (evt) {
     const popup = evt.target.closest('.popup');
@@ -27,13 +27,13 @@ document.querySelectorAll('.popup__close').forEach(closeButton => {
   });
 });
 
-// Добавляем начальные карточки на страницу
+// добавляем начальные карточки на страницу
 initialCards.forEach(cardData => {
   placesList.append(createCard(cardData, deleteCard));
 });
 
 
-// Обработчик событий для кнопки редактирования профиля
+// ... для кнопки редактирования профиля
 const editButton = document.querySelector('.profile__edit-button');
 editButton.addEventListener('click', function() {
   const profileName = document.querySelector('.profile__title');
@@ -46,7 +46,7 @@ editButton.addEventListener('click', function() {
   openPopup(document.querySelector('.popup_type_edit'));
 });
 
-// Обработчик событий для формы добавления новой карточки
+// ... для формы добавления новой карточки
 
 newCardForm.addEventListener('submit', function(evt) {
   addCard(evt);
@@ -54,7 +54,7 @@ newCardForm.addEventListener('submit', function(evt) {
 
 const addButton = document.querySelector('.profile__add-button');
 
-   // Обработчик клика по кнопке добавления карточки
+   //  по кнопке добавления карточки
  addButton.addEventListener('click', () => {
   openPopup(document.querySelector('.popup_type_new-card'));
   });
