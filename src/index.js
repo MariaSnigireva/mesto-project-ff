@@ -36,6 +36,15 @@ function openImagePopup(cardData) {
   openPopup(imagePopup);
 }
 
+function handleProfileSubmit(evt) {
+  evt.preventDefault();
+  profileName.textContent = nameInput.value;
+  profileDescription.textContent = descriptionInput.value;
+  closePopup(document.querySelector('.popup_type_edit'));
+}
+
+formEditProfile.addEventListener('submit', handleProfileSubmit);
+
 // Обработчики событий
 newCardForm.addEventListener('submit', addCard);
 editButton.addEventListener('click', function() {
@@ -47,7 +56,7 @@ editButton.addEventListener('click', function() {
 addButton.addEventListener('click', () => {
   openPopup(newCardPopup);
 });
-document.addEventListener('keydown', closeEscPopup);
+
 popups.forEach(popup => {
   popup.addEventListener('mousedown', evt => {
     if (evt.target.classList.contains('popup_is-opened')) {
