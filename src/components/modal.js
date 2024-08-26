@@ -22,27 +22,3 @@ export const handleEscapeKeydown = (evt) => {
 };
 
 
-// // Open popup
-// export function openPopup(popup) {
-//   if (popup) {
-//     popup.classList.add('popup_is-opened');
-//     document.addEventListener('keydown', closeEscPopup);
-//   }
-// }
-
-// // Close popup
-// export function closePopup(popup) {
-//     popup.classList.remove('popup_is-opened');
-//     document.removeEventListener('keydown', closeEscPopup);
-  
-// }
-
-// // Close popup with 'Escape' key
-// export function closeEscPopup(evt) { 
-//   if (evt.key === 'Escape') { 
-//     const popup = document.querySelector('.popup_is-opened'); 
-//     if (popup) {
-//       closePopup(popup); 
-//     }
-//   } 
-// }
