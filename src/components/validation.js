@@ -83,7 +83,6 @@ export const validationConfig = {
 }
 
 
-
 // // Функция для проверки валидности поля ввода
 // function isValidInput(inputElement, { inputErrorClass, errorClass }) {
 //   const isValid = inputElement.validity.valid;
