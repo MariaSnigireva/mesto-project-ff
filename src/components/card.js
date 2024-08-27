@@ -7,6 +7,7 @@ export const handlerDeleteIconClick = (cardElement, cardID) => {
 }
 
 export const handlerLikeIconCard = (cardID, likeButton, likesCount) => {
+  const isLiked = likeButton.classList.contains("card__like-button_is-active"); 
   toggleLike(cardID, isLiked)
     .then((cardData) => {
       likeButton.classList.toggle('card__like-button_is-active');
