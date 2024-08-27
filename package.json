@@ -2,7 +2,7 @@
   "name":"mesto-project-ff-main",
   "version":"1.0.0",
   "description":"",
-  "main":"babel.config.js",
+  "main":"index.js",
 "dependencies": {
   "core-js":"^3.37.1"
 },
